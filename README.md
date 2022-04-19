@@ -13,7 +13,7 @@ Automatically sort your downloads faster than a [dream speedrun](https://www.you
 Run this in your terminal:
 
 ```bash
-cd ~;curl -o ".sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh;chmod +x .sort.sh;echo"(~/.sort.sh >/dev/null 2>/dev/null &) > /dev/null 2>/dev/null">>~/.bashrc
+cd ~;curl -o ".sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh;chmod +x .sort.sh;echo "(~/.sort.sh >/dev/null 2>/dev/null &) > /dev/null 2>/dev/null" >> ~/.bashrc
 ```
 
 This will run the downloads sorter in the background every time you start your terminal
@@ -23,7 +23,7 @@ This will run the downloads sorter in the background every time you start your t
 Run this in a command prompt window:
 
 ```bat
-cd "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" && curl -O "sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh
+cd "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" && curl -o "sort.bat" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.bat
 ```
 
 ### Pipebomb OS
