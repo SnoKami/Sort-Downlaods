@@ -63,6 +63,16 @@ mkdir Ext/C
 mkdir Ext/CS
 mkdir Ext/Java
 mkdir Ext/db
+mkdir Ext/APK
+mkdir Ext/Roblox
+mkdir Ext/Roblox/Models
+mkdir Ext/Roblox/Places
+mkdir "Ext/Beat Saber"
+mkdir "Ext/Beat Saber/Bloqs"
+mkdir "Ext/Beat Saber/Platforms"
+mkdir "Ext/Beat Saber/Sabers"
+mkdir "Ext/Beat Saber/Avatars"
+mkdir "Ext/Beat Saber/Playlists"
 
 echo "// Moving Files to Directories"
 mv *.exe Ext/Exe/
@@ -82,6 +92,7 @@ mv *.mov Ext/Videos/
 mv *.webm Ext/Videos/
 mv *.m4v Ext/Videos/
 mv *.mp3 Ext/Audio/
+mv *.wav Ext/Audio/
 mv *.png Ext/Pictures/
 mv *.jpg Ext/Pictures/
 mv *.jpeg Ext/Pictures/
@@ -121,19 +132,29 @@ mv *.txt Ext/txt/
 mv *.efi Ext/efi/
 mv *.html Ext/HTML/
 mv *.crx Ext/crx/
-mv *.deb Ext/Applications
-mv *.appimage Ext/Applications
-mv *.c Ext/C
-mv *.h Ext/C
-mv *.cpp Ext/C
-mv *.hpp Ext/C
-mv *.cs Ext/CS
-mv *.java Ext/Java
-mv *.class Ext/Java
-mv *.sql Ext/db
-mv *.db Ext/db
-mv *.mysql Ext/db
-mv *.sqlite Ext/db
+mv *.deb Ext/Applications/
+mv *.appimage Ext/Applications/
+mv *.c Ext/C/
+mv *.h Ext/C/
+mv *.cpp Ext/C/
+mv *.hpp Ext/C/
+mv *.cs Ext/CS/
+mv *.java Ext/Java/
+mv *.class Ext/Java/
+mv *.sql Ext/db/
+mv *.db Ext/db/
+mv *.mysql Ext/db/
+mv *.sqlite Ext/db/
+mv *.apk Ext/APK/
+mv *.rbxm Ext/Roblox/Models/
+mv *.rbxmx Ext/Roblox/Models/
+mv *.rbxl Ext/Roblox/Places/
+mv *.rbxlx Ext/Roblox/Places/
+mv *.bloq "Ext/Beat Saber/Bloqs"
+mv *.plat "Ext/Beat Saber/Platforms"
+mv *.saber "Ext/Beat Saber/Sabers"
+mv *.avatar "Ext/Beat Saber/Avatars"
+mv *.bplist "Ext/Beat Saber/Playlists"
 
 echo "// Deleting Empty Directories"
 find ~/Downloads/Ext -empty -delete
