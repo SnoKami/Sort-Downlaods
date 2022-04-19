@@ -33,6 +33,7 @@ mkdir Ext\C
 mkdir Ext\CS
 mkdir Ext\Java
 mkdir Ext\db
+mkdir Ext\APK
 mkdir Ext\Roblox
 mkdir Ext\Roblox\Models
 mkdir Ext\Roblox\Places
@@ -53,6 +54,7 @@ move *.mov Ext\Videos\
 move *.webm Ext\Videos\
 move *.m4v Ext\Videos\
 move *.mp3 Ext\Audio\
+move *.wav Ext\Audio\
 move *.png Ext\Pictures\
 move *.jpg Ext\Pictures\
 move *.jpeg Ext\Pictures\
@@ -105,6 +107,7 @@ move *.sql Ext\db\
 move *.db Ext\db\
 move *.mysql Ext\db\
 move *.sqlite Ext\db\
+move *.apk Ext\APK\
 move *.rbxm Ext\Roblox\Models\
 move *.rbxmx Ext\Roblox\Models\
 move *.rbxl Ext\Roblox\Places\
