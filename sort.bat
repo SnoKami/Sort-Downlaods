@@ -42,6 +42,7 @@ mkdir "Ext\Beat Saber\Bloqs"
 mkdir "Ext\Beat Saber\Platforms"
 mkdir "Ext\Beat Saber\Sabers"
 mkdir "Ext\Beat Saber\Avatars"
+mkdir "Ext\Beat Saber\Playlists"
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -121,5 +122,6 @@ move *.bloq "Ext\Beat Saber\Bloqs"
 move *.plat "Ext\Beat Saber\Platforms"
 move *.saber "Ext\Beat Saber\Sabers"
 move *.avatar "Ext\Beat Saber\Avatars"
+move *.bplist "Ext\Beat Saber\Playlists"
 
 @REM I LIKE MEN!!!1
