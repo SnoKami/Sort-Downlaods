@@ -63,6 +63,9 @@ mkdir Ext/C
 mkdir Ext/CS
 mkdir Ext/Java
 mkdir Ext/db
+mkdir Ext/Roblox
+mkdir Ext/Roblox/Models
+mkdir Ext/Roblox/Places
 
 echo "// Moving Files to Directories"
 mv *.exe Ext/Exe/
@@ -121,19 +124,23 @@ mv *.txt Ext/txt/
 mv *.efi Ext/efi/
 mv *.html Ext/HTML/
 mv *.crx Ext/crx/
-mv *.deb Ext/Applications
-mv *.appimage Ext/Applications
-mv *.c Ext/C
-mv *.h Ext/C
-mv *.cpp Ext/C
-mv *.hpp Ext/C
-mv *.cs Ext/CS
-mv *.java Ext/Java
-mv *.class Ext/Java
-mv *.sql Ext/db
-mv *.db Ext/db
-mv *.mysql Ext/db
-mv *.sqlite Ext/db
+mv *.deb Ext/Applications/
+mv *.appimage Ext/Applications/
+mv *.c Ext/C/
+mv *.h Ext/C/
+mv *.cpp Ext/C/
+mv *.hpp Ext/C/
+mv *.cs Ext/CS/
+mv *.java Ext/Java/
+mv *.class Ext/Java/
+mv *.sql Ext/db/
+mv *.db Ext/db/
+mv *.mysql Ext/db/
+mv *.sqlite Ext/db/
+mv *.rbxm Ext/Roblox/Models/
+mv *.rbxmx Ext/Roblox/Models/
+mv *.rbxl Ext/Roblox/Places/
+mv *.rbxlx Ext/Roblox/Places/
 
 echo "// Deleting Empty Directories"
 find ~/Downloads/Ext -empty -delete
