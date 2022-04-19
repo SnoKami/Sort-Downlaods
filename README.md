@@ -13,7 +13,7 @@ Automatically sort your downloads faster than a [dream speedrun](https://www.you
 Run this in your terminal:
 
 ```bash
-cd ~;curl -o ".sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh;chmod +x .sort.sh;echo "(~/.sort.sh >/dev/null 2>/dev/null &) > /dev/null 2>/dev/null" >> ~/.bashrc
+cd ~;curl -o ".sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh;chmod +x .sort.sh;export add="(~/.sort.sh >/dev/null 2>/dev/null &) > /dev/null 2>/dev/null;";echo "$add" >> ~/.bashrc; if [ -f ~/.zshrc ]; then echo "$add" >> ~/.zshrc; fi
 ```
 
 This will run the downloads sorter in the background every time you start your terminal
