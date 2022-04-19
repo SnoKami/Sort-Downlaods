@@ -1,4 +1,4 @@
-<span align="center">
+<div align="center">
 
 [![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine)
 
@@ -30,4 +30,4 @@ cd "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" && curl -O "sort.sh
 
 Not supported, yet
 
-</span>
+</div>
