@@ -33,6 +33,9 @@ mkdir Ext\C
 mkdir Ext\CS
 mkdir Ext\Java
 mkdir Ext\db
+mkdir Ext\Roblox
+mkdir Ext\Roblox\Models
+mkdir Ext\Roblox\Places
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -91,16 +94,20 @@ move *.html Ext\HTML\
 move *.crx Ext\crx\
 move *.deb "Ext\Linux Applications"
 move *.appimage "Ext\Linux Applications"
-move *.c Ext\C
-move *.h Ext\C
-move *.cpp Ext\C 
-move *.hpp Ext\C
-move *.cs Ext\CS 
-move *.java Ext\Java
-move *.class Ext\Java
-move *.sql Ext\db
-move *.db Ext\db
-move *.mysql Ext\db
-move *.sqlite Ext\db
+move *.c Ext\C\
+move *.h Ext\C\
+move *.cpp Ext\C\ 
+move *.hpp Ext\C\
+move *.cs Ext\CS\
+move *.java Ext\Java\
+move *.class Ext\Java\
+move *.sql Ext\db\
+move *.db Ext\db\
+move *.mysql Ext\db\
+move *.sqlite Ext\db\
+move *.rbxm Ext\Roblox\Models\
+move *.rbxmx Ext\Roblox\Models\
+move *.rbxl Ext\Roblox\Places\
+move *.rbxlx Ext\Roblox\Places\
 
 @REM I LIKE MEN!!!1
