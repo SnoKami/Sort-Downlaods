@@ -47,7 +47,7 @@ mkdir "Ext/osu!"
 mkdir Ext/Tetrio
 mkdir Ext/ini
 mkdir Ext/Quaver
-mkdir Ext/docx
+mkdir Ext/Documents
 mkdir Ext/Torrent
 mkdir Ext/Virtualbox
 mkdir Ext/msi
@@ -73,7 +73,15 @@ mkdir "Ext/Beat Saber/Platforms"
 mkdir "Ext/Beat Saber/Sabers"
 mkdir "Ext/Beat Saber/Avatars"
 mkdir "Ext/Beat Saber/Playlists"
-mkdir Ext/Photoshop
+mkdir Ext/Adobe
+mkdir Ext/Adobe/Photoshop
+mkdir "Ext/Adobe/Premire Pro"
+mkdir "Ext/Adobe/After Effects"
+mkdir Ext/Adobe/Illustrator
+mkdir Ext/bginfo
+mkdir Ext/Markdown
+mkdir Ext/JSON
+mkdir "Ext/IY Plugins"
 
 echo "// Moving Files to Directories"
 mv *.exe Ext/Exe/
@@ -88,6 +96,7 @@ mv *.7z Ext/Zip/
 mv *.rar Ext/Zip/
 mv *.tar Ext/Zip/
 mv *.tar.gz Ext/Zip/
+mv *.tar.xz Ext/Zip/
 mv *.mp4 Ext/Videos/
 mv *.mov Ext/Videos/
 mv *.webm Ext/Videos/
@@ -109,7 +118,10 @@ mv *.ttrm Ext/Tetrio/
 mv *.ttr Ext/Tetrio/
 mv *.ini Ext/ini/
 mv *.qp Ext/Quaver/
-mv *.docx Ext/docx/
+mv *.docx Ext/Documents/
+mv *.pdf Ext/Documents/
+mv *.xltx Ext/Documents/
+mv *.xlsx Ext/Documents/
 mv *.torrent Ext/Torrent/
 mv *.magnet Ext/Torrent/
 mv *.vbox-extpack Ext/Virtualbox/
@@ -151,12 +163,19 @@ mv *.rbxm Ext/Roblox/Models/
 mv *.rbxmx Ext/Roblox/Models/
 mv *.rbxl Ext/Roblox/Places/
 mv *.rbxlx Ext/Roblox/Places/
-mv *.bloq "Ext/Beat Saber/Bloqs"
-mv *.plat "Ext/Beat Saber/Platforms"
-mv *.saber "Ext/Beat Saber/Sabers"
-mv *.avatar "Ext/Beat Saber/Avatars"
-mv *.bplist "Ext/Beat Saber/Playlists"
-mv *.psd Ext/Photoshop
+mv *.bloq "Ext/Beat Saber/Bloqs/"
+mv *.plat "Ext/Beat Saber/Platforms/"
+mv *.saber "Ext/Beat Saber/Sabers/"
+mv *.avatar "Ext/Beat Saber/Avatars/"
+mv *.bplist "Ext/Beat Saber/Playlists/"
+mv *.psd Ext/Adobe/Photoshop/
+mv *.prproj "Ext/Adobe/Premire Pro/"
+mv *.aep "Ext/Adobe/After Effects/"
+mv *.ai Ext/Adobe/Illustrator/
+mv *.bgi Ext/bginfo/
+mv *.md Ext/Markdown/
+mv *.json Ext/JSON/
+mv *.iy "Ext/IY Plugins"
 
 echo "// Deleting Empty Directories"
 find ~/Downloads/Ext -empty -delete

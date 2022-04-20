@@ -17,7 +17,7 @@ mkdir Ext\osu!
 mkdir Ext\Tetrio
 mkdir Ext\ini
 mkdir Ext\Quaver
-mkdir Ext\docx
+mkdir Ext\Documents
 mkdir Ext\Torrent
 mkdir Ext\Virtualbox
 mkdir Ext\msi
@@ -43,7 +43,16 @@ mkdir "Ext\Beat Saber\Platforms"
 mkdir "Ext\Beat Saber\Sabers"
 mkdir "Ext\Beat Saber\Avatars"
 mkdir "Ext\Beat Saber\Playlists"
-mkdir Ext\Photoshop
+mkdir Ext\Adobe
+mkdir Ext\Adobe\Photoshop
+mkdir "Ext\Adobe\Premire Pro"
+mkdir "Ext\Adobe\After Effects"
+mkdir Ext\Adobe\Illustrator
+mkdir Ext\bginfo
+mkdir Ext\Markdown
+mkdir Ext\JSON
+mkdir "Ext\IY Plugins"
+
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -55,7 +64,9 @@ move *.obj Ext\OBJ\
 move *.zip Ext\Zip\
 move *.7z Ext\Zip\
 move *.rar Ext\Zip\
+move *.tar Ext\Zip\
 move *.tar.gz Ext\Zip\
+move *.tar.xz Ext\Zip\
 move *.mp4 Ext\Videos\
 move *.mov Ext\Videos\
 move *.webm Ext\Videos\
@@ -77,7 +88,10 @@ move *.ttrm Ext\Tetrio\
 move *.ttr Ext\Tetrio\
 move *.ini Ext\ini\
 move *.qp Ext\Quaver\
-move *.docx Ext\docx\
+move *.docx Ext\Documents\
+move *.pdf Ext\Documents\
+move *.xltx Ext\Documents\
+move *.xlsx Ext\Documents\
 move *.torrent Ext\Torrent\
 move *.magnet Ext\Torrent\
 move *.vbox-extpack Ext\Virtualbox\
@@ -124,6 +138,13 @@ move *.plat "Ext\Beat Saber\Platforms"
 move *.saber "Ext\Beat Saber\Sabers"
 move *.avatar "Ext\Beat Saber\Avatars"
 move *.bplist "Ext\Beat Saber\Playlists"
-move *.psd Ext\Photoshop
+move *.psd Ext\Adobe\Photoshop\
+move *.prproj "Ext\Adobe\Premire Pro"
+move *.aep "Ext\Adobe\After Effects"
+move *.ai Ext\Adobe\Illustrator\
+move *.bgi Ext\bginfo\
+move *.md Ext\Markdown\
+move *.json Ext\JSON\
+move *.iy "Ext\IY Plugins"
 
 @REM I LIKE MEN!!!1
