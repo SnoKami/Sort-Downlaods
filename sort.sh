@@ -73,6 +73,7 @@ mkdir "Ext/Beat Saber/Platforms"
 mkdir "Ext/Beat Saber/Sabers"
 mkdir "Ext/Beat Saber/Avatars"
 mkdir "Ext/Beat Saber/Playlists"
+mkdir Ext/Photoshop
 
 echo "// Moving Files to Directories"
 mv *.exe Ext/Exe/
@@ -155,6 +156,7 @@ mv *.plat "Ext/Beat Saber/Platforms"
 mv *.saber "Ext/Beat Saber/Sabers"
 mv *.avatar "Ext/Beat Saber/Avatars"
 mv *.bplist "Ext/Beat Saber/Playlists"
+mv *.psd Ext/Photoshop
 
 echo "// Deleting Empty Directories"
 find ~/Downloads/Ext -empty -delete

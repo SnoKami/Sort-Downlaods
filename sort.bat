@@ -43,6 +43,7 @@ mkdir "Ext\Beat Saber\Platforms"
 mkdir "Ext\Beat Saber\Sabers"
 mkdir "Ext\Beat Saber\Avatars"
 mkdir "Ext\Beat Saber\Playlists"
+mkdir Ext\Photoshop
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -123,5 +124,6 @@ move *.plat "Ext\Beat Saber\Platforms"
 move *.saber "Ext\Beat Saber\Sabers"
 move *.avatar "Ext\Beat Saber\Avatars"
 move *.bplist "Ext\Beat Saber\Playlists"
+move *.psd Ext\Photoshop
 
 @REM I LIKE MEN!!!1
