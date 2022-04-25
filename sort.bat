@@ -157,6 +157,8 @@ move *.iy "Ext\IY Plugins"
 
 echo Removing Empty Directories
 echo STEP: Remove Empty Dirs >> sort.log
+mkdir Ext\Logs
+move *.log Ext\Logs
 
 curl -o _remove.ps1 https://raw.githubusercontent.com/MokiyCodes/Sort-Downlaods/main/_removeEmptyDir.ps1
 powershell -file _remove.ps1
