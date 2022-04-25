@@ -82,6 +82,7 @@ mkdir Ext/bginfo
 mkdir Ext/Markdown
 mkdir Ext/JSON
 mkdir "Ext/IY Plugins"
+mkdir Ext/Logs
 
 echo "// Moving Files to Directories"
 mv *.exe Ext/Exe/
@@ -176,6 +177,7 @@ mv *.bgi Ext/bginfo/
 mv *.md Ext/Markdown/
 mv *.json Ext/JSON/
 mv *.iy "Ext/IY Plugins"
+mv *.log Ext/Logs
 
 echo "// Deleting Empty Directories"
 find ~/Downloads/Ext -empty -delete
