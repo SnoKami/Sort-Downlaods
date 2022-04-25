@@ -1,58 +1,66 @@
-title "Sort Downloads"
+title Sort Downloads
 cd %UserProfile%
 cd Downloads
-mkdir Ext
-mkdir Ext\Exe
-mkdir Ext\Bin
-mkdir Ext\Jar
-mkdir Ext\Lua
-mkdir Ext\JS
-mkdir Ext\ISO
-mkdir Ext\OBJ
-mkdir Ext\Zip
-mkdir Ext\Videos
-mkdir Ext\Audio
-mkdir Ext\Pictures
-mkdir Ext\osu!
-mkdir Ext\Tetrio
-mkdir Ext\ini
-mkdir Ext\Quaver
-mkdir Ext\Documents
-mkdir Ext\Torrent
-mkdir Ext\Virtualbox
-mkdir Ext\msi
-mkdir Ext\yml
-mkdir Ext\Fonts
-mkdir Ext\DLL
-mkdir Ext\txt
-mkdir Ext\efi
-mkdir Ext\HTML
-mkdir Ext\crx
-mkdir "Ext\Linux Applications"
-mkdir Ext\C
-mkdir Ext\CS
-mkdir Ext\Java
-mkdir Ext\db
-mkdir Ext\APK
-mkdir Ext\Roblox
-mkdir Ext\Roblox\Models
-mkdir Ext\Roblox\Places
-mkdir "Ext\Beat Saber"
-mkdir "Ext\Beat Saber\Bloqs"
-mkdir "Ext\Beat Saber\Platforms"
-mkdir "Ext\Beat Saber\Sabers"
-mkdir "Ext\Beat Saber\Avatars"
-mkdir "Ext\Beat Saber\Playlists"
-mkdir Ext\Adobe
-mkdir Ext\Adobe\Photoshop
-mkdir "Ext\Adobe\Premire Pro"
-mkdir "Ext\Adobe\After Effects"
-mkdir Ext\Adobe\Illustrator
-mkdir Ext\bginfo
-mkdir Ext\Markdown
-mkdir Ext\JSON
-mkdir "Ext\IY Plugins"
 
+
+echo Making Directories...
+echo STEP: Making Directories > sort.log
+
+mkdir Ext >> sort.log 2>> sort.log
+mkdir Ext\Exe >> sort.log 2>> sort.log
+mkdir Ext\Bin >> sort.log 2>> sort.log
+mkdir Ext\Jar >> sort.log 2>> sort.log
+mkdir Ext\Lua >> sort.log 2>> sort.log
+mkdir Ext\JS >> sort.log 2>> sort.log
+mkdir Ext\ISO >> sort.log 2>> sort.log
+mkdir Ext\OBJ >> sort.log 2>> sort.log
+mkdir Ext\Zip >> sort.log 2>> sort.log
+mkdir Ext\Videos >> sort.log 2>> sort.log
+mkdir Ext\Audio >> sort.log 2>> sort.log
+mkdir Ext\Pictures >> sort.log 2>> sort.log
+mkdir Ext\osu! >> sort.log 2>> sort.log
+mkdir Ext\Tetrio >> sort.log 2>> sort.log
+mkdir Ext\ini >> sort.log 2>> sort.log
+mkdir Ext\Quaver >> sort.log 2>> sort.log
+mkdir Ext\Documents >> sort.log 2>> sort.log
+mkdir Ext\Torrent >> sort.log 2>> sort.log
+mkdir Ext\Virtualbox >> sort.log 2>> sort.log
+mkdir Ext\msi >> sort.log 2>> sort.log
+mkdir Ext\yml >> sort.log 2>> sort.log
+mkdir Ext\Fonts >> sort.log 2>> sort.log
+mkdir Ext\DLL >> sort.log 2>> sort.log
+mkdir Ext\txt >> sort.log 2>> sort.log
+mkdir Ext\efi >> sort.log 2>> sort.log
+mkdir Ext\HTML >> sort.log 2>> sort.log
+mkdir Ext\crx >> sort.log 2>> sort.log
+mkdir "Ext\Linux Applications" >> sort.log 2>> sort.log
+mkdir Ext\C >> sort.log 2>> sort.log
+mkdir Ext\CS >> sort.log 2>> sort.log
+mkdir Ext\Java >> sort.log 2>> sort.log
+mkdir Ext\db >> sort.log 2>> sort.log
+mkdir Ext\APK >> sort.log 2>> sort.log
+mkdir Ext\Roblox >> sort.log 2>> sort.log
+mkdir Ext\Roblox\Models >> sort.log 2>> sort.log
+mkdir Ext\Roblox\Places >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber" >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber\Bloqs" >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber\Platforms" >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber\Sabers" >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber\Avatars" >> sort.log 2>> sort.log
+mkdir "Ext\Beat Saber\Playlists" >> sort.log 2>> sort.log
+mkdir Ext\Adobe >> sort.log 2>> sort.log
+mkdir Ext\Adobe\Photoshop >> sort.log 2>> sort.log
+mkdir "Ext\Adobe\Premire Pro" >> sort.log 2>> sort.log
+mkdir "Ext\Adobe\After Effects" >> sort.log 2>> sort.log
+mkdir Ext\Adobe\Illustrator >> sort.log 2>> sort.log
+mkdir Ext\bginfo >> sort.log 2>> sort.log
+mkdir Ext\Markdown >> sort.log 2>> sort.log
+mkdir Ext\JSON >> sort.log 2>> sort.log
+mkdir "Ext\IY Plugins" >> sort.log 2>> sort.log
+
+echo Moving Files
+echo STEP: Moving Files >> sort.log
+echo WARN: Errors are not logged here for this step >> sort.log
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -146,5 +154,12 @@ move *.bgi Ext\bginfo\
 move *.md Ext\Markdown\
 move *.json Ext\JSON\
 move *.iy "Ext\IY Plugins"
+
+echo Removing Empty Directories
+echo STEP: Remove Empty Dirs >> sort.log
+
+curl -o _remove.ps1 https://raw.githubusercontent.com/MokiyCodes/Sort-Downlaods/main/_removeEmptyDir.ps1
+powershell -file _remove.ps1
+del _remove.ps1
 
 @REM I LIKE MEN!!!1
