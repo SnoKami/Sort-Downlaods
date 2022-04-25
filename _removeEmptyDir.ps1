@@ -1,5 +1,5 @@
 # Downloaded in sort.bat
-gci %UserProfile%\Ext\ -Recurse | foreach {
+gci Ext -Recurse | foreach {
   if( $_.psiscontainer -eq $true){
     if((gci $_.FullName) -eq $null){
       Write-Output "Removing Empty folder $($_.FullName)"
