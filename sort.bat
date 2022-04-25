@@ -137,6 +137,6 @@ echo "STEP: Remove Empty Dirs" >> sort.log
 
 curl -o _remove.ps1 https://raw.githubusercontent.com/MokiyCodes/Sort-Downlaods/main/_removeEmptyDir.ps1
 powershell -file _remove.ps1
-rm _remove.ps1
+del _remove.ps1
 
 @REM I LIKE MEN!!!1
