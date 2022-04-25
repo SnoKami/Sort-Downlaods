@@ -1,9 +1,9 @@
-title "Sort Downloads"
+title Sort Downloads
 cd %UserProfile%
 cd Downloads
 
-echo "Making Directories..."
-echo "STEP: Making Directories" > sort.log
+echo Making Directories...
+echo STEP: Making Directories > sort.log
 
 mkdir Ext >> sort.log 2>> sort.log
 mkdir Ext\Exe >> sort.log 2>> sort.log
@@ -48,9 +48,9 @@ mkdir "Ext\Beat Saber\Sabers" >> sort.log 2>> sort.log
 mkdir "Ext\Beat Saber\Avatars" >> sort.log 2>> sort.log
 mkdir "Ext\Beat Saber\Playlists" >> sort.log 2>> sort.log
 
-echo "Moving Files"
-echo "STEP: Moving Files" >> sort.log
-echo "WARN: Errors are not logged here for this step" >> sort.log
+echo Moving Files
+echo STEP: Moving Files >> sort.log
+echo WARN: Errors are not logged here for this step >> sort.log
 
 move *.exe Ext\Exe\
 move *.bin Ext\Bin\
@@ -132,8 +132,8 @@ move *.saber "Ext\Beat Saber\Sabers"
 move *.avatar "Ext\Beat Saber\Avatars"
 move *.bplist "Ext\Beat Saber\Playlists"
 
-echo "Removing Empty Directories"
-echo "STEP: Remove Empty Dirs" >> sort.log
+echo Removing Empty Directories
+echo STEP: Remove Empty Dirs >> sort.log
 
 curl -o _remove.ps1 https://raw.githubusercontent.com/MokiyCodes/Sort-Downlaods/main/_removeEmptyDir.ps1
 powershell -file _remove.ps1
