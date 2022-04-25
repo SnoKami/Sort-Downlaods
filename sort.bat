@@ -2,6 +2,7 @@ title Sort Downloads
 cd %UserProfile%
 cd Downloads
 
+
 echo Making Directories...
 echo STEP: Making Directories > sort.log
 
@@ -21,7 +22,7 @@ mkdir Ext\osu! >> sort.log 2>> sort.log
 mkdir Ext\Tetrio >> sort.log 2>> sort.log
 mkdir Ext\ini >> sort.log 2>> sort.log
 mkdir Ext\Quaver >> sort.log 2>> sort.log
-mkdir Ext\docx >> sort.log 2>> sort.log
+mkdir Ext\Documents >> sort.log 2>> sort.log
 mkdir Ext\Torrent >> sort.log 2>> sort.log
 mkdir Ext\Virtualbox >> sort.log 2>> sort.log
 mkdir Ext\msi >> sort.log 2>> sort.log
@@ -47,6 +48,15 @@ mkdir "Ext\Beat Saber\Platforms" >> sort.log 2>> sort.log
 mkdir "Ext\Beat Saber\Sabers" >> sort.log 2>> sort.log
 mkdir "Ext\Beat Saber\Avatars" >> sort.log 2>> sort.log
 mkdir "Ext\Beat Saber\Playlists" >> sort.log 2>> sort.log
+mkdir Ext\Adobe >> sort.log 2>> sort.log
+mkdir Ext\Adobe\Photoshop >> sort.log 2>> sort.log
+mkdir "Ext\Adobe\Premire Pro" >> sort.log 2>> sort.log
+mkdir "Ext\Adobe\After Effects" >> sort.log 2>> sort.log
+mkdir Ext\Adobe\Illustrator >> sort.log 2>> sort.log
+mkdir Ext\bginfo >> sort.log 2>> sort.log
+mkdir Ext\Markdown >> sort.log 2>> sort.log
+mkdir Ext\JSON >> sort.log 2>> sort.log
+mkdir "Ext\IY Plugins" >> sort.log 2>> sort.log
 
 echo Moving Files
 echo STEP: Moving Files >> sort.log
@@ -62,7 +72,9 @@ move *.obj Ext\OBJ\
 move *.zip Ext\Zip\
 move *.7z Ext\Zip\
 move *.rar Ext\Zip\
+move *.tar Ext\Zip\
 move *.tar.gz Ext\Zip\
+move *.tar.xz Ext\Zip\
 move *.mp4 Ext\Videos\
 move *.mov Ext\Videos\
 move *.webm Ext\Videos\
@@ -84,7 +96,10 @@ move *.ttrm Ext\Tetrio\
 move *.ttr Ext\Tetrio\
 move *.ini Ext\ini\
 move *.qp Ext\Quaver\
-move *.docx Ext\docx\
+move *.docx Ext\Documents\
+move *.pdf Ext\Documents\
+move *.xltx Ext\Documents\
+move *.xlsx Ext\Documents\
 move *.torrent Ext\Torrent\
 move *.magnet Ext\Torrent\
 move *.vbox-extpack Ext\Virtualbox\
@@ -131,6 +146,14 @@ move *.plat "Ext\Beat Saber\Platforms"
 move *.saber "Ext\Beat Saber\Sabers"
 move *.avatar "Ext\Beat Saber\Avatars"
 move *.bplist "Ext\Beat Saber\Playlists"
+move *.psd Ext\Adobe\Photoshop\
+move *.prproj "Ext\Adobe\Premire Pro"
+move *.aep "Ext\Adobe\After Effects"
+move *.ai Ext\Adobe\Illustrator\
+move *.bgi Ext\bginfo\
+move *.md Ext\Markdown\
+move *.json Ext\JSON\
+move *.iy "Ext\IY Plugins"
 
 echo Removing Empty Directories
 echo STEP: Remove Empty Dirs >> sort.log
