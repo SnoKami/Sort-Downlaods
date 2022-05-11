@@ -3,7 +3,7 @@
   "description": "Sort your Downloads",
   "license": "MIT",
   "author": "MokiyCodes <mokiy@wafflepowered.com>",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "source": "src/index.ts",
   "main": "bin/main.js",
   "devDependencies": {
