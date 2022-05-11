@@ -1,0 +1,12 @@
+# Node Modules
+node_modules
+
+# Distribution Files
+dist
+bin
+
+# Parcel Cache
+.parcel-cache
+
+# Logs
+sort-log.js

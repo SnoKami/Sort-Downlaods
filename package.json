@@ -1,0 +1,53 @@
+{
+  "name": "sort-downloads",
+  "description": "Sort your Downloads",
+  "license": "MIT",
+  "author": "MokiyCodes <mokiy@wafflepowered.com>",
+  "version": "0.1.0",
+  "source": "src/index.ts",
+  "main": "bin/main.js",
+  "devDependencies": {
+    "@norathefurry/eslint-config": "1.1.2",
+    "@parcel/core": "^2.5.0",
+    "@parcel/packager-ts": "^2.5.0",
+    "@parcel/transformer-typescript-types": "^2.5.0",
+    "@types/node": "^17.0.26",
+    "@types/yargs": "^17.0.10",
+    "eslint": "^8.14.0",
+    "parcel": "^2.5.0",
+    "typescript": ">=4.6.3"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint --fix src",
+    "build": "parcel build --no-cache",
+    "bundle": "pkg bin/main.js -C GZip -t node16-win-x64,node16-win-x86,node16-win-arm64,node16-linux-x64,node16-linux-x86,node16-linux-arm64",
+    "start": "node .",
+    "test": "node ."
+  },
+  "packageManager": "pnpm@6.32.10",
+  "private": false,
+  "targets": {
+    "main": {
+      "includeNodeModules": true
+    }
+  },
+  "bin": {
+    "sortdl": "./bin/main.js"
+  },
+  "shebang": [
+    {
+      "interpreter": "node",
+      "files": [
+        "./cli.ts"
+      ]
+    }
+  ],
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "fs-extra": "^10.1.0",
+    "semver": "^7.3.7",
+    "strip-ansi": "^7.0.1",
+    "update-notifier": "^5.1.0"
+  }
+}

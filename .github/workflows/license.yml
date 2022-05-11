@@ -1,0 +1,21 @@
+# Check Licenses using https://github.com/marketplace/actions/check-licenses
+name: Check License
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-licenses:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3.1.1
+      - name: Check Licenses
+        uses: YieldingExploiter/License-Action@1.0.1

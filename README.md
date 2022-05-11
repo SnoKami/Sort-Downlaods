@@ -6,28 +6,10 @@
 
 Automatically sort your downloads faster than a [dream speedrun](https://www.youtube.com/watch?v=rTgj1HxmUbg)!
 
-## Install Instructions
+---
 
-### Unix
+JS Rewrite in progress
 
-Run this in your terminal:
-
-```bash
-cd ~;curl -o ".sort.sh" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.sh;chmod +x .sort.sh;export add="(~/.sort.sh >/dev/null 2>/dev/null &) > /dev/null 2>/dev/null;";echo "$add" >> ~/.bashrc; if [ -f ~/.zshrc ]; then echo "$add" >> ~/.zshrc; fi; ~/.sort.sh
-```
-
-This will run the downloads sorter in the background every time you start your terminal
-
-### Windows
-
-Run this in a command prompt window:
-
-```bat
-cd "%appdata%\Microsoft\Windows\Start Menu\Programs\Startup" && curl -o "sort.bat" https://raw.githubusercontent.com/SnoKami/Sort-Downlaods/main/sort.bat && .\sort.bat
-```
-
-### Pipebomb OS
-
-Not supported, yet
+As of right now, this package has no functionality, and is kept purely to prevent the update checker from erroring. Please check in at a later date.
 
 </div>
