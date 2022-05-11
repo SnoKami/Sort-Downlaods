@@ -1,19 +1,28 @@
 #!/usr/bin/env node
-import packagefile from '../package.json';
+import chalk from 'chalk';
 import EnvInfo from './envinfo';
-import * as fs from 'fs';
+import * as fs from 'fs-extra';
 import * as path from 'path';
-import { ChalkInstance } from 'chalk';
 import stripAnsi from 'strip-ansi';
 import packagejson from '../package.json';
-import * as updateNotifier from 'update-notifier';
-
-const SkipUpdateCheck = true;
-
-const updater = updateNotifier({ 'pkg': packagejson, });
-updater.notify();
+import UpdateNotifier from 'update-notifier';
+import SortList from './sortBy';
+import RenameList from './renameList';
 
 (async(LogFile)=>{
+  try {
+    // Updates
+    const Notifier = UpdateNotifier({
+      'pkg': packagejson, 'shouldNotifyInNpmScript': true, 'updateCheckInterval': 1000 * 60 * 60, 'distTag': 'latest'
+    });
+    Notifier.notify({
+      'isGlobal': true,
+      'message': `Update available ${chalk.dim('{currentVersion}')}${chalk.reset(' → ')}${chalk.green('{latestVersion}')} \nRun ${chalk.cyan(`pnpm i -g ${packagejson.name}`)} to update`,
+    });
+  } catch (error) {
+    console.warn('// WARN: Update Check failed', error);
+  }
+
   // Better Log
   const rawLog = console.log;
   console.log = (...a: string[])=>{
@@ -22,11 +31,7 @@ updater.notify();
       .replace(/`/gi, '\\`')
       .replace(/(\r\n|\r|\n)/gi, '\\n')}\`);\n`);
   };
-  fs.writeFileSync(LogFile, `// Run this in VM2 - https://npm.im/vm2\nconsole.log(\`[31mThis is a log file from ${new Date}[39m\`);\n`);
-  // Imports
-  // eslint-disable-next-line no-eval
-  const chalk: ChalkInstance = (await eval(`import('chalk')`)).default;
-
+  fs.writeFileSync(LogFile, `// Run this in VM2 - https://npm.im/vm2\nconsole.log(\`[31mThis is a log file from ${new Date} running using ${packagejson.version}[39m\`);\n`);
   const comment = chalk.rgb(200, 200, 200);
 
   // Welcome Message
@@ -38,7 +43,7 @@ updater.notify();
  * @url https://github.com/SnoKami/Sort-Downlaods/
  * @author SnoKami
  * @coauthor MokiyCodes
- * @version ${packagefile.version}
+ * @version ${packagejson.version}
  * @license MIT
  */
 /*
@@ -64,7 +69,8 @@ ${EnvInfo.Indent(2)}
       console.log(comment(`// ${chalk.bgRgb(255, 122, 122).rgb(0, 0, 0)(' ERR ')} Exiting due to error.`));
       return process.exit(1) ? '' : '';
     }
-    console.log(comment(`// ${chalk.bgRgb(122, 122, 255).rgb(0, 0, 0)(' START ')} ${start}`));
+    if (start.length > 0)
+      console.log(comment(`// ${chalk.bgRgb(122, 122, 255).rgb(0, 0, 0)(' START ')} ${start}`));
     return start;
   };
 
@@ -77,9 +83,42 @@ ${EnvInfo.Indent(2)}
     step('Downloads Folder Not Found', Dir, true);
     return process.exit(1);
   }
-  step('Prepare File Renamer', `Found Downloads Folder ${Dir ? `(${Dir})` : '(No dir found - pass c to use the current dir)'}`, !Dir);
+  step('Prepare File Lists', `Found Downloads Folder ${Dir ? `(${Dir})` : '(No dir found - pass c to use the current dir)'}`, !Dir);
   if (!Dir)
     return process.exit(1);
   const AllFiles = fs.readdirSync(Dir);
-  step('Prepare Downloads Sorter', 'Prepared File Renamer');
+  step('Prepare Downloads Sorter', 'Prepared File Lists');
+  const Lists: Record<string, string[]> = {};
+  for (const k in SortList)
+    if (Object.prototype.hasOwnProperty.call(SortList, k)) {
+      const v = SortList[k];
+      let has = false;
+      const list = [];
+      // don't know of a better algorithm to do this
+      for (const ending of v)
+        for (const file of AllFiles)
+          if (file.endsWith(ending)){
+            has = true;
+            list.push(path.resolve(Dir, file));
+          }
+      if (has) {
+        fs.ensureDirSync(path.resolve(Dir, k));
+        Lists[path.resolve(Dir, k)] = list;
+        step('', `Prepared List ${k} (${v.length} entries)`);
+      }
+    }
+  step('Sorting Downloads', 'Prepared File Lists');
+  for (const Directory in Lists){
+    const Files = Lists[Directory];
+    step(`Moving ${Files.length} files to ${Directory}`);
+    for (const File of Files) {
+      let baseName = path.basename(File);
+      for (const reg of RenameList)
+        if (reg.test(baseName))
+          baseName = `${Math.floor((new Date).getTime() / 1000)}-${baseName}`;
+      fs.moveSync(File, path.resolve(Directory, baseName));
+    }
+    step('', `Moved ${Files.length} files to ${Directory}`);
+  }
+  step('', 'Sorted Downloads');
 })(path.join(process.cwd(), 'sort-log.js'));
