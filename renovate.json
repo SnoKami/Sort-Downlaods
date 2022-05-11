@@ -1,0 +1,7 @@
+{
+  "extends": [
+    "github>MokiyCodes/MokiyCodes//cfg/renovate",
+    ":automergePr",
+    ":automergeAll"
+  ]
+}
